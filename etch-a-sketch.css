@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: rgb(235, 230, 230);
+}
+
+h1 {
+    font-family: 'Lobster Two', serif;
+    font-size: 3.5rem;
+    color: rgb(167, 49, 49);
+
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.square {
+    height: 700px;
+    width: 700px;
+    border: 5px solid black;
+    background-color: white;
+     display: flex; 
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.small-square {
+    border: 1px solid lightgray;
+}
