@@ -14,11 +14,24 @@
     </header>
 
     <section>
+        <form class="form-parent">
+            <label for="grid-size" class="form">Grid Size: </label>
+            <input id="size-input" type="text" name="grid-size" placeholder="Grid Size (max 64)">
+            <button type="button" id="submit">Submit</button>
+        </form>
+
+        <form class="color">
+            <p>Select Your Color: </p>
+            <label for="black">Black</label>
+            <input id="black" type="radio" name="color" value="black" checked>
+            <label for="rainbow">Rainbow</label>
+            <input id="rainbow" type="radio" name="color" value="rainbow">
+            <button type="button" id="erase">Clear the Board</button>
+        </form>
+
         <div class="square"></div>
     </section>
 
     <script src="etch-a-sketch.js"></script>
 </body>
 </html>
-
-<!--NOTES: for rainbow colors on the etch a sketch. you can use the position of the mouse to generate a random rgb value-->
