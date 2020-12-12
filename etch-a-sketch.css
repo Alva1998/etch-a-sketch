@@ -74,16 +74,24 @@ section {
     background-color: white;
     display: flex; 
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    /*display: grid;
-    justify-content: center;
-    margin: auto;
-    grid-template-columns: repeat(var(--numCols), 1fr);
-    grid-template-rows: repeat(var(--numRows), 1fr);*/
+    flex-wrap: wrap; 
+
 }
 
 .small-square {
-    border: rgba(92, 91, 91, 0.137) 1px solid;
+    border: rgba(92, 91, 91, 0.137) 1px solid; 
     margin: 0;
-    padding: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.color {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#black {
+
 }

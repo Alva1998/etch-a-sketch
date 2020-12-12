@@ -1,7 +1,6 @@
 const sketchGame = () => {
     const square = document.querySelector('.square');
     const input = document.querySelector('input');
-    const submit = document.querySelector('#submit');
     let userGrid = 16;
     let divArray = [];
     let gridSize = userGrid ** 2;
@@ -9,11 +8,15 @@ const sketchGame = () => {
     const userGridSize = () => {
         const button = document.querySelector('button');
         button.addEventListener('click', () => {
-            userGrid = input.value;
-            gridSize = userGrid ** 2;
-            eraseGrid();
-            generateGrid();
-            activateGrid();
+            if (input.value <= 64) {
+                userGrid = input.value;
+                gridSize = userGrid ** 2;
+                eraseGrid();
+                generateGrid();
+                activateGrid();
+            } else {
+                alert('Grid Dimensions can not be greater than 64');
+            }
         });
     }
 
@@ -22,6 +25,7 @@ const sketchGame = () => {
             square.removeChild(divArray[i]);
         }
         divArray.length = 0;
+        colorChanges();
     }
 
     const generateGrid = () => {
@@ -46,10 +50,11 @@ const sketchGame = () => {
     }
 
     const getRandomColor = () => {
-        const red = Math.floor(Math.random() * 256/2);
-        const green = Math.floor(Math.random() * 256/2);
-        const blue = Math.floor(Math.random() * 256/2);
-        return `rgb(${red}, ${green}, ${blue})`;
+        // const red = Math.floor(Math.random() * 256/2);
+        // const green = Math.floor(Math.random() * 256/2);
+        // const blue = Math.floor(Math.random() * 256/2);
+        // return `rgb(${red}, ${green}, ${blue})`;
+        return `hsl(${Math.random() * 360}, 85%, 50%)`;
     }
 
     const rainbow = () => {
